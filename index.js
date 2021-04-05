@@ -26,12 +26,9 @@
 
 
 
-
-const os = require('os');
-
-// Identifying the platform, eg 'aix', 'darwin', ...
-
-let platform = os.platform()
-console.log(platform);
-
-
+const dgram = require('dgram');
+const message = Buffer.from('Some bytes');
+const client = dgram.createSocket('udp4');
+client.send(message, 41234, 'localhost', (err) => {
+    client.close();
+});
