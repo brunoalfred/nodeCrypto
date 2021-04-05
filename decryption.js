@@ -1,7 +1,7 @@
 
 let crypto = require('crypto');
 
-const decrypt = (password, encrypted) => {
+const decrypt = ( encrypted, password) => {
     const algorithm = 'aes-192-cbc';
    
 
