@@ -29,10 +29,9 @@
 
 const os = require('os');
 
-// identifying the endianness of the CPU for which the Node.js binary was compiled 
-// Possible values are 'BE' for big endian and 'LE' for little endian.
+// Identifying the platform, eg 'aix', 'darwin', ...
 
-let endianess = os.endianness()
-console.log(endianess);
+let platform = os.platform()
+console.log(platform);
 
 
